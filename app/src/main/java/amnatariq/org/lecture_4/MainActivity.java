@@ -16,16 +16,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //binding event
         tv = findViewById(R.id.MyTextView);
         btn = findViewById(R.id.ButtonClick);
-
-        //onclick listner function
-//        btn.setOnClickListener(new View.OnClickListner(){
-//            @Override
-//
-//        })
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tv.setText("Button clicked, so text changed");
+            }
+        });
     }
 
     public void ChangeText(View view)
